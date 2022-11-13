@@ -22,7 +22,8 @@ class MovieListViewController: UITableViewController {
     private func createLoader() {
         let url = URL(string: "https://ghibliapi.herokuapp.com/films")!
         let urlSession = URLSession(configuration: .default)
-        loader = MovieLoader(url: url, client: urlSession)
+        let remoteLoader = RemoteMovieLoader(url: url, client: urlSession)
+        loader = LogRemoteMovieLoaderDecoratee(decoratee: remoteLoader)
     }
     
     private func loadMovieData() {
