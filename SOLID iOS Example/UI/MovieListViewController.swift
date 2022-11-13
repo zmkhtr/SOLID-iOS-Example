@@ -9,13 +9,24 @@ import UIKit
 
 class MovieListViewController: UITableViewController {
     
-    private var tableData: [RemoteMovie] = []
-    private let loader: MovieLoader = MovieLoader()
+    private var tableData: [Movie] = []
+    private var loader: MovieLoader?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        loader.getMovieList { [weak self] result in
+        createLoader()
+        loadMovieData()
+    }
+    
+    private func createLoader() {
+        let url = URL(string: "https://ghibliapi.herokuapp.com/films")!
+        let urlSession = URLSession(configuration: .default)
+        loader = MovieLoader(url: url, client: urlSession)
+    }
+    
+    private func loadMovieData() {
+        loader?.getMovieList { [weak self] result in
             guard let self = self else { return }
             
             switch result {
@@ -27,7 +38,7 @@ class MovieListViewController: UITableViewController {
         }
     }
     
-    private func updateTableData(movies: [RemoteMovie]) {
+    private func updateTableData(movies: [Movie]) {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
             self.tableData.append(contentsOf: movies)

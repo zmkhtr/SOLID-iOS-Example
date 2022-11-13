@@ -9,28 +9,38 @@ import Foundation
 
 class MovieLoader {
     
-    typealias MovieResult = Swift.Result<[RemoteMovie], Error>
+    private let url: URL
+    private let client: URLSession
     
-    func getMovieList(completion: @escaping (MovieResult) -> Void) {
-        let url = URL(string: "https://ghibliapi.herokuapp.com/films")!
-
-        URLSession.shared.dataTask(with: url) { (data, response, error) in
-            DispatchQueue.main.sync {
-                do {
-                    if let data = data,
-                       let response = response as? HTTPURLResponse,
-                       response.statusCode == 200 {
-                        let movies = try JSONDecoder().decode([RemoteMovie].self, from: data)
-                        completion(.success(movies))
-                    } else {
-                        completion(.failure(NetworkError.unexpectedData))
-                    }
-                } catch {
+    init(url: URL, client: URLSession) {
+        self.url = url
+        self.client = client
+    }
+    
+    typealias Result = Swift.Result<[Movie], Error>
+    
+    func getMovieList(completion: @escaping (Result) -> Void) {
+        
+        client.dataTask(with: url) { [weak self] (data, response, error) in
+            guard self != nil else { return  }
+                if let data = data,
+                   let response = response as? HTTPURLResponse {
+                    completion(MovieLoader.map(data, from: response))
+                } else {
                     completion(.failure(NetworkError.networkError))
                 }
-            }
         }.resume()
     }
+    
+    private static func map(_ data: Data, from response: HTTPURLResponse) -> Result {
+        do {
+            let movies = try MovieItemMapper.map(data, from: response)
+            return .success(movies)
+        } catch {
+            return .failure(error)
+        }
+    }
 }
+
 
 

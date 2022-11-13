@@ -17,6 +17,8 @@
 		20F4837F291FF433005FF1D8 /* MovieLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F4837E291FF433005FF1D8 /* MovieLoader.swift */; };
 		20F483852920CF79005FF1D8 /* RemoteMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F483842920CF79005FF1D8 /* RemoteMovie.swift */; };
 		20F483872920CF8F005FF1D8 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F483862920CF8F005FF1D8 /* NetworkError.swift */; };
+		20F483892920E97A005FF1D8 /* MovieItemMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F483882920E97A005FF1D8 /* MovieItemMapper.swift */; };
+		20F4838B2920E9BC005FF1D8 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F4838A2920E9BC005FF1D8 /* Movie.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		20F4837E291FF433005FF1D8 /* MovieLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieLoader.swift; sourceTree = "<group>"; };
 		20F483842920CF79005FF1D8 /* RemoteMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteMovie.swift; sourceTree = "<group>"; };
 		20F483862920CF8F005FF1D8 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		20F483882920E97A005FF1D8 /* MovieItemMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieItemMapper.swift; sourceTree = "<group>"; };
+		20F4838A2920E9BC005FF1D8 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,7 @@
 				20F4837C291FF3A2005FF1D8 /* MovieCell.swift */,
 				20F483842920CF79005FF1D8 /* RemoteMovie.swift */,
 				20F483862920CF8F005FF1D8 /* NetworkError.swift */,
+				20F4838A2920E9BC005FF1D8 /* Movie.swift */,
 			);
 			path = "Data Model";
 			sourceTree = "<group>";
@@ -90,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				20F4837E291FF433005FF1D8 /* MovieLoader.swift */,
+				20F483882920E97A005FF1D8 /* MovieItemMapper.swift */,
 			);
 			path = "Data Loader";
 			sourceTree = "<group>";
@@ -176,8 +182,10 @@
 			files = (
 				20F483852920CF79005FF1D8 /* RemoteMovie.swift in Sources */,
 				20F483872920CF8F005FF1D8 /* NetworkError.swift in Sources */,
+				20F4838B2920E9BC005FF1D8 /* Movie.swift in Sources */,
 				20F4837F291FF433005FF1D8 /* MovieLoader.swift in Sources */,
 				20BD7BC6291F770300C7A162 /* MovieListViewController.swift in Sources */,
+				20F483892920E97A005FF1D8 /* MovieItemMapper.swift in Sources */,
 				20BD7BC2291F770300C7A162 /* AppDelegate.swift in Sources */,
 				20F4837D291FF3A2005FF1D8 /* MovieCell.swift in Sources */,
 				20BD7BC4291F770300C7A162 /* SceneDelegate.swift in Sources */,
