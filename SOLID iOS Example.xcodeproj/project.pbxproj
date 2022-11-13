@@ -15,6 +15,8 @@
 		20BD7BCE291F770500C7A162 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20BD7BCC291F770500C7A162 /* LaunchScreen.storyboard */; };
 		20F4837D291FF3A2005FF1D8 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F4837C291FF3A2005FF1D8 /* MovieCell.swift */; };
 		20F4837F291FF433005FF1D8 /* MovieLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F4837E291FF433005FF1D8 /* MovieLoader.swift */; };
+		20F483852920CF79005FF1D8 /* RemoteMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F483842920CF79005FF1D8 /* RemoteMovie.swift */; };
+		20F483872920CF8F005FF1D8 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F483862920CF8F005FF1D8 /* NetworkError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		20BD7BCF291F770500C7A162 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20F4837C291FF3A2005FF1D8 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		20F4837E291FF433005FF1D8 /* MovieLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieLoader.swift; sourceTree = "<group>"; };
+		20F483842920CF79005FF1D8 /* RemoteMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteMovie.swift; sourceTree = "<group>"; };
+		20F483862920CF8F005FF1D8 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +80,8 @@
 			isa = PBXGroup;
 			children = (
 				20F4837C291FF3A2005FF1D8 /* MovieCell.swift */,
+				20F483842920CF79005FF1D8 /* RemoteMovie.swift */,
+				20F483862920CF8F005FF1D8 /* NetworkError.swift */,
 			);
 			path = "Data Model";
 			sourceTree = "<group>";
@@ -168,6 +174,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20F483852920CF79005FF1D8 /* RemoteMovie.swift in Sources */,
+				20F483872920CF8F005FF1D8 /* NetworkError.swift in Sources */,
 				20F4837F291FF433005FF1D8 /* MovieLoader.swift in Sources */,
 				20BD7BC6291F770300C7A162 /* MovieListViewController.swift in Sources */,
 				20BD7BC2291F770300C7A162 /* AppDelegate.swift in Sources */,

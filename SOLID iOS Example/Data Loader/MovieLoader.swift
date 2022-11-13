@@ -7,20 +7,6 @@
 
 import Foundation
 
-enum NetworkError: Error {
-    case unexpectedData
-    case networkError
-}
-
-struct RemoteMovie: Decodable {
-    let id, title, original_title, original_title_romanised: String
-    let image, movie_banner: URL
-    let description, director, producer, release_date: String
-    let running_time, rt_score: String
-    let people, species, locations, vehicles: [String]
-    let url: String
-}
-
 class MovieLoader {
     
     typealias MovieResult = Swift.Result<[RemoteMovie], Error>
