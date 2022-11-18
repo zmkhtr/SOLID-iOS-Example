@@ -28,11 +28,8 @@ class MovieListViewController: UITableViewController {
     }
     
     private func updateTableData(movies: [RemoteMovie]) {
-        DispatchQueue.main.async { [weak self] in
-            guard let self = self else { return }
-            self.tableData.append(contentsOf: movies)
-            self.tableView.reloadData()
-        }
+        self.tableData.append(contentsOf: movies)
+        self.tableView.reloadData()
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
