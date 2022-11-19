@@ -10,12 +10,12 @@ import UIKit
 class MovieListViewController: UITableViewController {
     
     private var tableData: [RemoteMovie] = []
-    private let loader: MovieLoader = MovieLoader()
+    private let api = APIService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        loader.getMovieList { [weak self] result in
+        api.getMovieList { [weak self] result in
             guard let self = self else { return }
             
             switch result {

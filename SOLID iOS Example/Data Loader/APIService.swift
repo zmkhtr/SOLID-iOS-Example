@@ -7,7 +7,7 @@
 
 import Foundation
 
-class MovieLoader {
+class APIService {
     
     typealias MovieResult = Swift.Result<[RemoteMovie], Error>
     
