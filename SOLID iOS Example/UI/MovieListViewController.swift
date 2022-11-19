@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MovieListViewController.swift
 //  SOLID iOS Example
 //
 //  Created by Azam Mukhtar on 12/11/22.
