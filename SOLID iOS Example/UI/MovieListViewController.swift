@@ -14,7 +14,7 @@ class MovieListViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
         api.getMovieList { [weak self] result in
             guard let self = self else { return }
             
