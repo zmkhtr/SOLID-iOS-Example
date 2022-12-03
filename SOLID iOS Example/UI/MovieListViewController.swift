@@ -9,26 +9,26 @@ import UIKit
 
 class MovieListViewController: UITableViewController {
     
-    private var tableData: [RemoteMovie] = []
+    private var tableData: [RemoteCatFact] = []
     private let api = APIService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        api.getMovieList { [weak self] result in
+        api.getCatFacts { [weak self] result in
             guard let self = self else { return }
             
             switch result {
-            case let .success(movies):
-                self.updateTableData(movies: movies)
+            case let .success(catfacts):
+                self.updateTableData(catfacts: catfacts)
             case .failure(_):
                 print("Handle error")
             }
         }
     }
     
-    private func updateTableData(movies: [RemoteMovie]) {
-        self.tableData.append(contentsOf: movies)
+    private func updateTableData(catfacts: [RemoteCatFact]) {
+        self.tableData.append(contentsOf: catfacts)
         self.tableView.reloadData()
     }
     
@@ -37,11 +37,11 @@ class MovieListViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath) as! MovieCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CatFactCell", for: indexPath) as! CatFactCell
         
-        let movie = tableData[indexPath.row]
-        cell.titleLabel.text = movie.title
-        cell.descriptionLabel.text = movie.description
+        let catFact = tableData[indexPath.row]
+        cell.titleLabel.text = "\(catFact.length)"
+        cell.descriptionLabel.text = catFact.fact
         
         return cell
     }
