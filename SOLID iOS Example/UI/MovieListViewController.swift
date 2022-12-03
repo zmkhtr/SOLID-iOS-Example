@@ -40,7 +40,7 @@ class MovieListViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CatFactCell", for: indexPath) as! CatFactCell
         
         let catFact = tableData[indexPath.row]
-        cell.titleLabel.text = "\(catFact.length)"
+        cell.titleLabel.text = "Cat fact number \(indexPath.row + 1)"
         cell.descriptionLabel.text = catFact.fact
         
         return cell
