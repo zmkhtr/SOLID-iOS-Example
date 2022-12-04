@@ -1,5 +1,5 @@
 //
-//  MovieListViewController.swift
+//  CatFactListViewController.swift
 //  SOLID iOS Example
 //
 //  Created by Azam Mukhtar on 12/11/22.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MovieListViewController: UITableViewController {
+class CatFactListViewController: UITableViewController {
     
     private var tableData: [RemoteCatFact] = []
     private let api = APIService()
