@@ -9,9 +9,9 @@ import Foundation
 
 class APIService {
     
-    typealias CatFactResult = Swift.Result<[RemoteCatFact], Error>
+    typealias Result = Swift.Result<[RemoteCatFact], Error>
     
-    func getCatFacts(completion: @escaping (CatFactResult) -> Void) {
+    func getCatFacts(completion: @escaping (Result) -> Void) {
         let url = URL(string: "https://catfact.ninja/facts")!
 
         URLSession.shared.dataTask(with: url) { [weak self] (data, response, error) in
