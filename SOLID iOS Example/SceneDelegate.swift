@@ -17,17 +17,24 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let scene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: scene)
 
+        // Remote
         let url = URL(string: "https://catfact.ninja/facts")!
         let client = URLSession.init(configuration: .ephemeral)
+        let remote = RemoteCatFactLoader(url: url, client: client)
         
-        let loader = RemoteCatFactLoader(url: url, client: client)
-        let decoratee = CatFactLoaderLogDecorator(decoratee: loader)
+        // Remote Decorator
+        let logRemoteDecorator = CatFactLoaderLogDecorator(decoratee: remote)
+        let cacheRemoteDecorator = CatFactLoaderCacheDecorator(decoratee: logRemoteDecorator)
+        
+        // JSON
         let jsonLoader = JSONCatFactLoader()
-        let composite = CatFactLoaderFallbackComposite(
-            primary: decoratee,
-            fallback: jsonLoader)
         
-        window?.rootViewController = makeCatFactsListViewController(with: composite)
+        // Loader
+        let loader = CatFactLoaderFallbackComposite(
+            primary: jsonLoader,
+            fallback: cacheRemoteDecorator)
+        
+        window?.rootViewController = makeCatFactsListViewController(with: loader)
         window?.makeKeyAndVisible()
     }
     
