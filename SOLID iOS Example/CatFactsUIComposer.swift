@@ -12,6 +12,7 @@ final class CatFactsUIComposer {
     private init() {}
     
     static func catFactsComposedWith(loader: CatFactLoader) -> CatFactListViewController {
+        let loader = MainQueueDispatchDecorator(decoratee: loader)
         return CatFactsUIComposer.makeCatFactsListViewController(with: loader)
     }
     
@@ -21,5 +22,13 @@ final class CatFactsUIComposer {
             return CatFactListViewController(coder: coder, loader: loader)
         }
         return catFactViewController!
+    }
+}
+
+extension MainQueueDispatchDecorator: CatFactLoader where T == CatFactLoader {
+    func load(completion: @escaping (CatFactLoader.Result) -> Void) {
+        decoratee.load { [weak self] result in
+            self?.dispatch { completion(result) }
+        }
     }
 }

@@ -37,10 +37,8 @@ class CatFactListViewController: UITableViewController {
     }
     
     private func updateTableData(catfacts: [CatFactItem]) {
-        DispatchQueue.main.async {
-            self.tableData.append(contentsOf: catfacts)
-            self.tableView.reloadData()
-        }
+        self.tableData.append(contentsOf: catfacts)
+        self.tableView.reloadData()
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
