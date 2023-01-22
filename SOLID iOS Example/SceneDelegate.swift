@@ -36,17 +36,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             primary: cacheRemoteDecorator,
             fallback: jsonLoader)
         
-        window?.rootViewController = makeCatFactsListViewController(with: loader)
+        window?.rootViewController = CatFactsUIComposer.catFactsComposedWith(loader: loader)
         window?.makeKeyAndVisible()
-    }
-    
-    
-    private func makeCatFactsListViewController(with loader: CatFactLoader) -> CatFactListViewController {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let catFactViewController = storyboard.instantiateInitialViewController { coder in
-            return CatFactListViewController(coder: coder, loader: loader)
-        }
-        return catFactViewController!
     }
 }
 
