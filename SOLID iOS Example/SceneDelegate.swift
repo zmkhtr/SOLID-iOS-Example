@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let url = URL(string: "https://catfact.ninja/facts")!
         let client = URLSession.init(configuration: .ephemeral)
         
-        let loader = CatFactLoaderCacheDecorator(url: url, client: client)
+        let loader = CatFactLoader(url: url, client: client)
         
         window?.rootViewController = makeCatFactsListViewController(with: loader)
         window?.makeKeyAndVisible()
