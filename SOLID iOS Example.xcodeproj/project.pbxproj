@@ -61,6 +61,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		20B1F434297D8D050068C54E /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				20F4837E291FF433005FF1D8 /* CatFactLoader.swift */,
+				20B1F422297D3EBC0068C54E /* CatFactItem.swift */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		20B1F435297D8D1D0068C54E /* API */ = {
+			isa = PBXGroup;
+			children = (
+				20F483842920CF79005FF1D8 /* RemoteCatFactResponse.swift */,
+				20B1F420297D3D5B0068C54E /* CatFactsItemMapper.swift */,
+				20B1F430297D875A0068C54E /* RemoteCatFactLoader.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		20B1F436297D8D260068C54E /* Cat Facts Modules */ = {
+			isa = PBXGroup;
+			children = (
+				20F483812920C3D3005FF1D8 /* Main */,
+				20B1F437297D8D390068C54E /* JSON */,
+				20B1F435297D8D1D0068C54E /* API */,
+				20B1F434297D8D050068C54E /* Feature */,
+			);
+			path = "Cat Facts Modules";
+			sourceTree = "<group>";
+		};
+		20B1F437297D8D390068C54E /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				20B1F429297D528D0068C54E /* CatFacts.json */,
+				20B1F42B297D68980068C54E /* JSONCatFactLoader.swift */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		20B1F438297D8D740068C54E /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				20F483862920CF8F005FF1D8 /* GeneralError.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		20BD7BB5291F770300C7A162 = {
 			isa = PBXGroup;
 			children = (
@@ -80,10 +127,9 @@
 		20BD7BC0291F770300C7A162 /* SOLID iOS Example */ = {
 			isa = PBXGroup;
 			children = (
-				20B1F429297D528D0068C54E /* CatFacts.json */,
+				20B1F438297D8D740068C54E /* Shared */,
+				20B1F436297D8D260068C54E /* Cat Facts Modules */,
 				20F483822920C3FC005FF1D8 /* UI */,
-				20F483812920C3D3005FF1D8 /* Data Loader */,
-				20F483802920C3C6005FF1D8 /* Data Model */,
 				20BD7BC1291F770300C7A162 /* AppDelegate.swift */,
 				20BD7BC3291F770300C7A162 /* SceneDelegate.swift */,
 				20BD7BCA291F770500C7A162 /* Assets.xcassets */,
@@ -93,28 +139,14 @@
 			path = "SOLID iOS Example";
 			sourceTree = "<group>";
 		};
-		20F483802920C3C6005FF1D8 /* Data Model */ = {
-			isa = PBXGroup;
-			children = (
-				20B1F422297D3EBC0068C54E /* CatFactItem.swift */,
-				20F483842920CF79005FF1D8 /* RemoteCatFactResponse.swift */,
-				20F483862920CF8F005FF1D8 /* GeneralError.swift */,
-			);
-			path = "Data Model";
-			sourceTree = "<group>";
-		};
-		20F483812920C3D3005FF1D8 /* Data Loader */ = {
+		20F483812920C3D3005FF1D8 /* Main */ = {
 			isa = PBXGroup;
 			children = (
 				20B1F424297D503C0068C54E /* CatFactLoaderLogDecorator.swift */,
 				20B1F426297D50940068C54E /* CatFactLoaderCacheDecorator.swift */,
-				20F4837E291FF433005FF1D8 /* CatFactLoader.swift */,
-				20B1F420297D3D5B0068C54E /* CatFactsItemMapper.swift */,
-				20B1F42B297D68980068C54E /* JSONCatFactLoader.swift */,
-				20B1F430297D875A0068C54E /* RemoteCatFactLoader.swift */,
 				20B1F432297D896D0068C54E /* CatFactLoaderFallbackComposite.swift */,
 			);
-			path = "Data Loader";
+			path = Main;
 			sourceTree = "<group>";
 		};
 		20F483822920C3FC005FF1D8 /* UI */ = {
