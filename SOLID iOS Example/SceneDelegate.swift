@@ -19,7 +19,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // Remote
         let url = URL(string: "https://catfact.ninja/facts")!
-        let client = URLSession.init(configuration: .ephemeral)
+        let session = URLSession.init(configuration: .ephemeral)
+        let client = URLSessionHTTPClient(session: session)
         let remote = RemoteCatFactLoader(url: url, client: client)
         
         // Remote Decorator
