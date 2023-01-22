@@ -81,7 +81,6 @@
 		20F483802920C3C6005FF1D8 /* Data Model */ = {
 			isa = PBXGroup;
 			children = (
-				20F4837C291FF3A2005FF1D8 /* CatFactCell.swift */,
 				20F483842920CF79005FF1D8 /* RemoteCatFactResponse.swift */,
 				20F483862920CF8F005FF1D8 /* NetworkError.swift */,
 			);
@@ -100,6 +99,7 @@
 		20F483822920C3FC005FF1D8 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				20F4837C291FF3A2005FF1D8 /* CatFactCell.swift */,
 				20BD7BC5291F770300C7A162 /* MovieListViewController.swift */,
 				20BD7BC7291F770300C7A162 /* Main.storyboard */,
 			);
