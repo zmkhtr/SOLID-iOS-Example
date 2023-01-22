@@ -7,7 +7,8 @@
 
 import Foundation
 
-enum NetworkError: Error {
+enum GeneralError: Error {
     case unexpectedData
     case networkError
+    case missingJSONFile
 }
