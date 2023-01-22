@@ -7,7 +7,6 @@
 
 import Foundation
 
-// MARK: - RemoteCatFact
 struct RemoteCatFactResponse: Codable {
     let current_page: Int
     let data: [RemoteCatFact]
@@ -21,13 +20,11 @@ struct RemoteCatFactResponse: Codable {
     let to, total: Int
 }
 
-// MARK: - Datum
 struct RemoteCatFact: Codable {
     let fact: String
     let length: Int
 }
 
-// MARK: - Link
 struct RemoteLink: Codable {
     let url: String?
     let label: String
