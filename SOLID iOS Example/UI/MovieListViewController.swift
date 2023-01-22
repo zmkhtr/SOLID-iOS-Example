@@ -10,7 +10,7 @@ import UIKit
 class CatFactListViewController: UITableViewController {
     
     private var tableData: [CatFactItem] = []
-    private let api = APIService(
+    private let loader = CatFactLoader(
         url: URL(string: "https://catfact.ninja/facts")!,
         client: URLSession.init(configuration: .ephemeral)
     )
@@ -18,7 +18,7 @@ class CatFactListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        api.getCatFacts { [weak self] result in
+        loader.load { [weak self] result in
             guard let self = self else { return }
             
             switch result {

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class APIService {
+class CatFactLoader {
     
     private let url: URL
     private let client: URLSession
@@ -19,13 +19,13 @@ class APIService {
         self.client = client
     }
     
-    func getCatFacts(completion: @escaping (Result) -> Void) {
+    func load(completion: @escaping (Result) -> Void) {
         client.dataTask(with: url) { [weak self] (data, response, error) in
             guard self != nil else { return }
             DispatchQueue.main.sync {
                 if let data = data,
                    let response = response as? HTTPURLResponse {
-                    completion(APIService.map(data, response))
+                    completion(CatFactLoader.map(data, response))
                 } else {
                     completion(.failure(NetworkError.networkError))
                 }
