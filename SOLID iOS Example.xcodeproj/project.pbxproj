@@ -16,6 +16,7 @@
 		20B1F431297D875A0068C54E /* RemoteCatFactLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B1F430297D875A0068C54E /* RemoteCatFactLoader.swift */; };
 		20B1F433297D896D0068C54E /* CatFactLoaderFallbackComposite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B1F432297D896D0068C54E /* CatFactLoaderFallbackComposite.swift */; };
 		20B1F441297D91590068C54E /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B1F440297D91590068C54E /* HTTPClient.swift */; };
+		20B1F444297D92010068C54E /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B1F443297D92010068C54E /* URLSessionHTTPClient.swift */; };
 		20BD7BC2291F770300C7A162 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BD7BC1291F770300C7A162 /* AppDelegate.swift */; };
 		20BD7BC4291F770300C7A162 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BD7BC3291F770300C7A162 /* SceneDelegate.swift */; };
 		20BD7BC6291F770300C7A162 /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BD7BC5291F770300C7A162 /* MovieListViewController.swift */; };
@@ -38,6 +39,7 @@
 		20B1F430297D875A0068C54E /* RemoteCatFactLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteCatFactLoader.swift; sourceTree = "<group>"; };
 		20B1F432297D896D0068C54E /* CatFactLoaderFallbackComposite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFactLoaderFallbackComposite.swift; sourceTree = "<group>"; };
 		20B1F440297D91590068C54E /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		20B1F443297D92010068C54E /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
 		20BD7BBE291F770300C7A162 /* SOLID iOS Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SOLID iOS Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		20BD7BC1291F770300C7A162 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20BD7BC3291F770300C7A162 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				20B1F442297D91600068C54E /* Features */,
+				20B1F443297D92010068C54E /* URLSessionHTTPClient.swift */,
 			);
 			path = "HTTPClient Modules";
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 				20BD7BC6291F770300C7A162 /* MovieListViewController.swift in Sources */,
 				20B1F425297D503C0068C54E /* CatFactLoaderLogDecorator.swift in Sources */,
 				20BD7BC2291F770300C7A162 /* AppDelegate.swift in Sources */,
+				20B1F444297D92010068C54E /* URLSessionHTTPClient.swift in Sources */,
 				20B1F441297D91590068C54E /* HTTPClient.swift in Sources */,
 				20B1F42C297D68980068C54E /* JSONCatFactLoader.swift in Sources */,
 				20F4837D291FF3A2005FF1D8 /* CatFactCell.swift in Sources */,
