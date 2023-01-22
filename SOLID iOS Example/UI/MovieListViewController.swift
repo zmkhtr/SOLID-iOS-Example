@@ -10,15 +10,21 @@ import UIKit
 class CatFactListViewController: UITableViewController {
     
     private var tableData: [CatFactItem] = []
-    private let loader = CatFactLoader(
-        url: URL(string: "https://catfact.ninja/facts")!,
-        client: URLSession.init(configuration: .ephemeral)
-    )
+    private var loader: CatFactLoader?
+    
+    init?(coder: NSCoder, loader: CatFactLoader) {
+        self.loader = loader
+        super.init(coder: coder)
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        loader.load { [weak self] result in
+        loader?.load { [weak self] result in
             guard let self = self else { return }
             
             switch result {
