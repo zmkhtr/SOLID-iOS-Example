@@ -9,12 +9,18 @@ import Foundation
 
 class APIService {
     
+    private let url: URL
+    private let client: URLSession
+    
     typealias Result = Swift.Result<[RemoteCatFact], Error>
     
+    init(url: URL, client: URLSession) {
+        self.url = url
+        self.client = client
+    }
+    
     func getCatFacts(completion: @escaping (Result) -> Void) {
-        let url = URL(string: "https://catfact.ninja/facts")!
-
-        URLSession.shared.dataTask(with: url) { [weak self] (data, response, error) in
+        client.dataTask(with: url) { [weak self] (data, response, error) in
             guard self != nil else { return }
             DispatchQueue.main.sync {
                 do {
