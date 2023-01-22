@@ -10,7 +10,10 @@ import UIKit
 class CatFactListViewController: UITableViewController {
     
     private var tableData: [RemoteCatFact] = []
-    private let api = APIService()
+    private let api = APIService(
+        url: URL(string: "https://catfact.ninja/facts")!,
+        client: URLSession.init(configuration: .ephemeral)
+    )
     
     override func viewDidLoad() {
         super.viewDidLoad()
