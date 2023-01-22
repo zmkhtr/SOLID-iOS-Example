@@ -21,10 +21,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let client = URLSession.init(configuration: .ephemeral)
         
         let loader = RemoteCatFactLoader(url: url, client: client)
+        let decoratee = CatFactLoaderLogDecorator(decoratee: loader)
         let jsonLoader = JSONCatFactLoader()
         let composite = CatFactLoaderFallbackComposite(
-            primary: jsonLoader,
-            fallback: loader)
+            primary: decoratee,
+            fallback: jsonLoader)
         
         window?.rootViewController = makeCatFactsListViewController(with: composite)
         window?.makeKeyAndVisible()
