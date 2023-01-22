@@ -25,17 +25,21 @@ class APIService {
             DispatchQueue.main.sync {
                 if let data = data,
                    let response = response as? HTTPURLResponse {
-                    do {
-                        let facts = try CatFactsItemMapper.map(data, from: response)
-                        completion(.success(facts))
-                    } catch {
-                        completion(.failure(NetworkError.unexpectedData))
-                    }
+                    completion(APIService.map(data, response))
                 } else {
                     completion(.failure(NetworkError.networkError))
                 }
             }
         }.resume()
+    }
+    
+    private static func map(_ data: Data, _ response: HTTPURLResponse) -> Result {
+        do {
+            let facts = try CatFactsItemMapper.map(data, from: response)
+            return .success(facts)
+        } catch {
+            return .failure(NetworkError.unexpectedData)
+        }
     }
 }
 
