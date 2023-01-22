@@ -20,6 +20,7 @@
 		20B1F447297D92960068C54E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 20B1F446297D92960068C54E /* Alamofire */; };
 		20B1F449297D92C60068C54E /* AlamofireHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B1F448297D92C60068C54E /* AlamofireHTTPClient.swift */; };
 		20B1F44D297D95C60068C54E /* CatFactsUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B1F44C297D95C60068C54E /* CatFactsUIComposer.swift */; };
+		20B1F44F297D97040068C54E /* MainQueueDispatchDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B1F44E297D97040068C54E /* MainQueueDispatchDecorator.swift */; };
 		20BD7BC2291F770300C7A162 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BD7BC1291F770300C7A162 /* AppDelegate.swift */; };
 		20BD7BC4291F770300C7A162 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BD7BC3291F770300C7A162 /* SceneDelegate.swift */; };
 		20BD7BC6291F770300C7A162 /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BD7BC5291F770300C7A162 /* MovieListViewController.swift */; };
@@ -45,6 +46,7 @@
 		20B1F443297D92010068C54E /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
 		20B1F448297D92C60068C54E /* AlamofireHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireHTTPClient.swift; sourceTree = "<group>"; };
 		20B1F44C297D95C60068C54E /* CatFactsUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFactsUIComposer.swift; sourceTree = "<group>"; };
+		20B1F44E297D97040068C54E /* MainQueueDispatchDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQueueDispatchDecorator.swift; sourceTree = "<group>"; };
 		20BD7BBE291F770300C7A162 /* SOLID iOS Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SOLID iOS Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		20BD7BC1291F770300C7A162 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20BD7BC3291F770300C7A162 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				20BD7BCC291F770500C7A162 /* LaunchScreen.storyboard */,
 				20BD7BCF291F770500C7A162 /* Info.plist */,
 				20B1F44C297D95C60068C54E /* CatFactsUIComposer.swift */,
+				20B1F44E297D97040068C54E /* MainQueueDispatchDecorator.swift */,
 			);
 			path = "SOLID iOS Example";
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				20B1F444297D92010068C54E /* URLSessionHTTPClient.swift in Sources */,
 				20B1F441297D91590068C54E /* HTTPClient.swift in Sources */,
 				20B1F44D297D95C60068C54E /* CatFactsUIComposer.swift in Sources */,
+				20B1F44F297D97040068C54E /* MainQueueDispatchDecorator.swift in Sources */,
 				20B1F42C297D68980068C54E /* JSONCatFactLoader.swift in Sources */,
 				20B1F449297D92C60068C54E /* AlamofireHTTPClient.swift in Sources */,
 				20F4837D291FF3A2005FF1D8 /* CatFactCell.swift in Sources */,
