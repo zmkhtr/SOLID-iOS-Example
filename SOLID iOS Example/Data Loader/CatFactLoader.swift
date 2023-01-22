@@ -22,13 +22,11 @@ class CatFactLoader {
     func load(completion: @escaping (Result) -> Void) {
         client.dataTask(with: url) { [weak self] (data, response, error) in
             guard self != nil else { return }
-            DispatchQueue.main.sync {
-                if let data = data,
-                   let response = response as? HTTPURLResponse {
-                    completion(CatFactLoader.map(data, response))
-                } else {
-                    completion(.failure(NetworkError.networkError))
-                }
+            if let data = data,
+               let response = response as? HTTPURLResponse {
+                completion(CatFactLoader.map(data, response))
+            } else {
+                completion(.failure(NetworkError.networkError))
             }
         }.resume()
     }
