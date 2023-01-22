@@ -12,7 +12,7 @@ class APIService {
     private let url: URL
     private let client: URLSession
     
-    typealias Result = Swift.Result<[RemoteCatFact], Error>
+    typealias Result = Swift.Result<[CatFactItem], Error>
     
     init(url: URL, client: URLSession) {
         self.url = url

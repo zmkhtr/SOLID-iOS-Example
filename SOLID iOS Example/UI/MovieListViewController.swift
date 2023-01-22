@@ -9,7 +9,7 @@ import UIKit
 
 class CatFactListViewController: UITableViewController {
     
-    private var tableData: [RemoteCatFact] = []
+    private var tableData: [CatFactItem] = []
     private let api = APIService(
         url: URL(string: "https://catfact.ninja/facts")!,
         client: URLSession.init(configuration: .ephemeral)
@@ -30,7 +30,7 @@ class CatFactListViewController: UITableViewController {
         }
     }
     
-    private func updateTableData(catfacts: [RemoteCatFact]) {
+    private func updateTableData(catfacts: [CatFactItem]) {
         self.tableData.append(contentsOf: catfacts)
         self.tableView.reloadData()
     }
