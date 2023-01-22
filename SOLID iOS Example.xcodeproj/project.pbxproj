@@ -23,7 +23,7 @@
 		20F4837D291FF3A2005FF1D8 /* CatFactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F4837C291FF3A2005FF1D8 /* CatFactCell.swift */; };
 		20F4837F291FF433005FF1D8 /* CatFactLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F4837E291FF433005FF1D8 /* CatFactLoader.swift */; };
 		20F483852920CF79005FF1D8 /* RemoteCatFactResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F483842920CF79005FF1D8 /* RemoteCatFactResponse.swift */; };
-		20F483872920CF8F005FF1D8 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F483862920CF8F005FF1D8 /* NetworkError.swift */; };
+		20F483872920CF8F005FF1D8 /* GeneralError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F483862920CF8F005FF1D8 /* GeneralError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,7 +45,7 @@
 		20F4837C291FF3A2005FF1D8 /* CatFactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFactCell.swift; sourceTree = "<group>"; };
 		20F4837E291FF433005FF1D8 /* CatFactLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFactLoader.swift; sourceTree = "<group>"; };
 		20F483842920CF79005FF1D8 /* RemoteCatFactResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteCatFactResponse.swift; sourceTree = "<group>"; };
-		20F483862920CF8F005FF1D8 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		20F483862920CF8F005FF1D8 /* GeneralError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +96,7 @@
 			children = (
 				20B1F422297D3EBC0068C54E /* CatFactItem.swift */,
 				20F483842920CF79005FF1D8 /* RemoteCatFactResponse.swift */,
-				20F483862920CF8F005FF1D8 /* NetworkError.swift */,
+				20F483862920CF8F005FF1D8 /* GeneralError.swift */,
 			);
 			path = "Data Model";
 			sourceTree = "<group>";
@@ -201,7 +201,7 @@
 				20B1F431297D875A0068C54E /* RemoteCatFactLoader.swift in Sources */,
 				20B1F427297D50940068C54E /* CatFactLoaderCacheDecorator.swift in Sources */,
 				20B1F423297D3EBC0068C54E /* CatFactItem.swift in Sources */,
-				20F483872920CF8F005FF1D8 /* NetworkError.swift in Sources */,
+				20F483872920CF8F005FF1D8 /* GeneralError.swift in Sources */,
 				20F4837F291FF433005FF1D8 /* CatFactLoader.swift in Sources */,
 				20BD7BC6291F770300C7A162 /* MovieListViewController.swift in Sources */,
 				20B1F425297D503C0068C54E /* CatFactLoaderLogDecorator.swift in Sources */,
