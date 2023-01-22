@@ -13,6 +13,7 @@
 		20B1F427297D50940068C54E /* CatFactLoaderCacheDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B1F426297D50940068C54E /* CatFactLoaderCacheDecorator.swift */; };
 		20B1F42A297D528D0068C54E /* CatFacts.json in Resources */ = {isa = PBXBuildFile; fileRef = 20B1F429297D528D0068C54E /* CatFacts.json */; };
 		20B1F42C297D68980068C54E /* JSONCatFactLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B1F42B297D68980068C54E /* JSONCatFactLoader.swift */; };
+		20B1F431297D875A0068C54E /* RemoteCatFactLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B1F430297D875A0068C54E /* RemoteCatFactLoader.swift */; };
 		20BD7BC2291F770300C7A162 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BD7BC1291F770300C7A162 /* AppDelegate.swift */; };
 		20BD7BC4291F770300C7A162 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BD7BC3291F770300C7A162 /* SceneDelegate.swift */; };
 		20BD7BC6291F770300C7A162 /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BD7BC5291F770300C7A162 /* MovieListViewController.swift */; };
@@ -32,6 +33,7 @@
 		20B1F426297D50940068C54E /* CatFactLoaderCacheDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFactLoaderCacheDecorator.swift; sourceTree = "<group>"; };
 		20B1F429297D528D0068C54E /* CatFacts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CatFacts.json; sourceTree = "<group>"; };
 		20B1F42B297D68980068C54E /* JSONCatFactLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONCatFactLoader.swift; sourceTree = "<group>"; };
+		20B1F430297D875A0068C54E /* RemoteCatFactLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteCatFactLoader.swift; sourceTree = "<group>"; };
 		20BD7BBE291F770300C7A162 /* SOLID iOS Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SOLID iOS Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		20BD7BC1291F770300C7A162 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20BD7BC3291F770300C7A162 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				20F4837E291FF433005FF1D8 /* CatFactLoader.swift */,
 				20B1F420297D3D5B0068C54E /* CatFactsItemMapper.swift */,
 				20B1F42B297D68980068C54E /* JSONCatFactLoader.swift */,
+				20B1F430297D875A0068C54E /* RemoteCatFactLoader.swift */,
 			);
 			path = "Data Loader";
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 			files = (
 				20B1F421297D3D5B0068C54E /* CatFactsItemMapper.swift in Sources */,
 				20F483852920CF79005FF1D8 /* RemoteCatFactResponse.swift in Sources */,
+				20B1F431297D875A0068C54E /* RemoteCatFactLoader.swift in Sources */,
 				20B1F427297D50940068C54E /* CatFactLoaderCacheDecorator.swift in Sources */,
 				20B1F423297D3EBC0068C54E /* CatFactItem.swift in Sources */,
 				20F483872920CF8F005FF1D8 /* NetworkError.swift in Sources */,
