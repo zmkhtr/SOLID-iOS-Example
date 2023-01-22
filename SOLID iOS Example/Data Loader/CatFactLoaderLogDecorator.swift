@@ -9,10 +9,16 @@ import Foundation
 
 class CatFactLoaderLogDecorator: CatFactLoader {
     
-        super.load { result in
+    private let decoratee: CatFactLoader
+    
+    init(decoratee: CatFactLoader) {
+        self.decoratee = decoratee
+    }
+    
+    func load(completion: @escaping (CatFactLoader.Result) -> Void) {
+        decoratee.load { result in
             print("CatFactLoader Result \(result)")
             completion(result)
         }
-    func load(completion: @escaping (CatFactLoader.Result) -> Void) {
     }
 }
