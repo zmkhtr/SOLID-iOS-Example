@@ -9,13 +9,16 @@ import UIKit
 
 class CatFactListViewController: UITableViewController {
     
-    private var tableData: [RemoteCatFact] = []
-    private let api = APIService()
+    private var tableData: [CatFactItem] = []
+    private let loader = CatFactLoader(
+        url: URL(string: "https://catfact.ninja/facts")!,
+        client: URLSession.init(configuration: .ephemeral)
+    )
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        api.getCatFacts { [weak self] result in
+        loader.load { [weak self] result in
             guard let self = self else { return }
             
             switch result {
@@ -27,9 +30,11 @@ class CatFactListViewController: UITableViewController {
         }
     }
     
-    private func updateTableData(catfacts: [RemoteCatFact]) {
-        self.tableData.append(contentsOf: catfacts)
-        self.tableView.reloadData()
+    private func updateTableData(catfacts: [CatFactItem]) {
+        DispatchQueue.main.async {
+            self.tableData.append(contentsOf: catfacts)
+            self.tableView.reloadData()
+        }
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
