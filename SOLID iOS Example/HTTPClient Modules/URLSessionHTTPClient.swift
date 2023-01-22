@@ -11,11 +11,11 @@ class URLSessionHTTPClient: HTTPClient {
     
     private let session: URLSession
     
-    public init(session: URLSession) {
+    init(session: URLSession) {
         self.session = session
     }
     
-    public func request(from url: URL, completion: @escaping (HTTPClient.Result) -> Void)  {
+    func request(from url: URL, completion: @escaping (HTTPClient.Result) -> Void)  {
         session.dataTask(with: url) { data, response, error in
             if let error = error {
                 completion(.failure(error))
