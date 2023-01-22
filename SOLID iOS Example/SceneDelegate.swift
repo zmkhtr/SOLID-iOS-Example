@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Remote
         let url = URL(string: "https://catfact.ninja/facts")!
         let session = URLSession.init(configuration: .ephemeral)
-        let client = URLSessionHTTPClient(session: session)
+        _ = URLSessionHTTPClient(session: session)
 //        let remote = RemoteCatFactLoader(url: url, client: client)
         let remote = RemoteCatFactLoader(url: url, client: AlamofireHTTPClient())
         
