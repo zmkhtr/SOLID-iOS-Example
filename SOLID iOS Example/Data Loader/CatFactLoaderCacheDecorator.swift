@@ -9,7 +9,6 @@ import Foundation
 
 class CatFactLoaderCacheDecorator: CatFactLoader {
     
-    override func load(completion: @escaping (CatFactLoader.Result) -> Void) {
         super.load { result in
             switch result {
             case let .success(facts):
@@ -20,5 +19,6 @@ class CatFactLoaderCacheDecorator: CatFactLoader {
                 completion(.failure(error))
             }
         }
+    func load(completion: @escaping (CatFactLoader.Result) -> Void) {
     }
 }

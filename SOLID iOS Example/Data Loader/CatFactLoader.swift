@@ -7,11 +7,11 @@
 
 import Foundation
 
-class CatFactLoader {
+protocol CatFactLoader {
     
     typealias Result = Swift.Result<[CatFactItem], Error>
     
-    func load(completion: @escaping (Result) -> Void) {}
+    func load(completion: @escaping (Result) -> Void)
 }
 
 
