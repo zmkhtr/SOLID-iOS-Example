@@ -17,7 +17,7 @@ class CatFactLoaderFallbackComposite: CatFactLoader {
         self.fallback = fallback
     }
     
-    override func load(completion: @escaping (CatFactLoader.Result) -> Void) {
+    func load(completion: @escaping (CatFactLoader.Result) -> Void) {
         primary.load { [weak self] result in
             guard let self = self else { return }
             

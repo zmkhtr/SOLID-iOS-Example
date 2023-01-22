@@ -9,8 +9,14 @@ import Foundation
 
 class CatFactLoaderCacheDecorator: CatFactLoader {
     
-    override func load(completion: @escaping (CatFactLoader.Result) -> Void) {
-        super.load { result in
+    private let decoratee: CatFactLoader
+    
+    init(decoratee: CatFactLoader) {
+        self.decoratee = decoratee
+    }
+    
+    func load(completion: @escaping (CatFactLoader.Result) -> Void) {
+        decoratee.load { result in
             switch result {
             case let .success(facts):
                 // Save to Local Storage

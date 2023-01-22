@@ -19,7 +19,7 @@ class RemoteCatFactLoader: CatFactLoader {
         self.client = client
     }
     
-    override func load(completion: @escaping (Result) -> Void) {
+    func load(completion: @escaping (Result) -> Void) {
         client.dataTask(with: url) { [weak self] (data, response, error) in
             guard self != nil else { return }
             if let data = data,

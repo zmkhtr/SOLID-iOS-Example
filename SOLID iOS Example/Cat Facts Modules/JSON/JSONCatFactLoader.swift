@@ -8,7 +8,7 @@
 import Foundation
 
 class JSONCatFactLoader: CatFactLoader {
-    override func load(completion: @escaping (CatFactLoader.Result) -> Void) {
+    func load(completion: @escaping (CatFactLoader.Result) -> Void) {
         guard let url = Bundle.main.url(forResource: "CatFacts", withExtension: "json") else {
             completion(.failure(GeneralError.missingJSONFile))
             return
