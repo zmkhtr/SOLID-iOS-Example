@@ -19,10 +19,10 @@ class JSONCatFactLoader: CatFactLoader {
                 }
                 completion(.success(catFacts))
             } catch {
-                completion(.failure(NetworkError.unexpectedData))
+                completion(.failure(GeneralError.unexpectedData))
             }
         } else {
-            completion(.failure(NetworkError.unexpectedData))
+            completion(.failure(GeneralError.unexpectedData))
         }
     }
 }

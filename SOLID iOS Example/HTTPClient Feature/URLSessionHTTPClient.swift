@@ -21,7 +21,7 @@ class URLSessionHTTPClient: HTTPClient {
             } else if let data = data, let response = response as? HTTPURLResponse {
                 completion(.success((data, response)))
             } else {
-                completion(.failure(NetworkError.unexpectedData))
+                completion(.failure(GeneralError.unexpectedData))
             }
         }.resume()
     }

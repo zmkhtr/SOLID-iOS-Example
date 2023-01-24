@@ -27,7 +27,7 @@ class RemoteCatFactLoader: CatFactLoader {
             case let .success((data, response)):
                 completion(RemoteCatFactLoader.map(data, response))
             case .failure:
-                completion(.failure(NetworkError.networkError))
+                completion(.failure(GeneralError.networkError))
             }
         }
     }
@@ -37,7 +37,7 @@ class RemoteCatFactLoader: CatFactLoader {
             let facts = try CatFactItemMapper.map(data, from: response)
             return .success(facts)
         } catch {
-            return .failure(NetworkError.unexpectedData)
+            return .failure(GeneralError.unexpectedData)
         }
     }
 }

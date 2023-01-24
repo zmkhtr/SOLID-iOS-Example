@@ -19,27 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let scene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: scene)
         
-        let url = URL(string: "https://catfact.ninja/facts")!
-        let session = URLSession(configuration: .ephemeral)
-//        let client = URLSessionHTTPClient(session: session)
-        let client = AlamofireHTTPClient()
-        let remote = RemoteCatFactLoader(url: url, client: client)
-        let remoteCache = CatFactLoaderCacheDecorator(decoratee: remote)
-        
-        let json = JSONCatFactLoader()
-        let jsonLog = CatFactLoaderCacheDecorator(decoratee: json)
-        
-        let loader = CatFactLoaderFallbackComposite(
-            primary: remoteCache,
-            fallback: jsonLog)
-        
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let viewController = storyboard.instantiateInitialViewController { coder in
-            return CatFactListViewController(coder: coder, loader: loader)
-        }
-        
-        
-        window?.rootViewController = viewController
+        window?.rootViewController = CatFactsFactory.create()
         window?.makeKeyAndVisible()
     }
 

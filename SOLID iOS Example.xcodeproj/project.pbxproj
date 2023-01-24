@@ -19,6 +19,9 @@
 		201CE96A298037C300BF5CD6 /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201CE969298037C300BF5CD6 /* URLSessionHTTPClient.swift */; };
 		201CE96D2980382700BF5CD6 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 201CE96C2980382700BF5CD6 /* Alamofire */; };
 		201CE96F2980389B00BF5CD6 /* AlamofireHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201CE96E2980389B00BF5CD6 /* AlamofireHTTPClient.swift */; };
+		201CE97629803BF400BF5CD6 /* CatFactsUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201CE97529803BF400BF5CD6 /* CatFactsUIComposer.swift */; };
+		201CE97829803D1600BF5CD6 /* MainQueueDispatchDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201CE97729803D1600BF5CD6 /* MainQueueDispatchDecorator.swift */; };
+		201CE97A29803D3900BF5CD6 /* CatFactsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201CE97929803D3900BF5CD6 /* CatFactsFactory.swift */; };
 		20BD7BC2291F770300C7A162 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BD7BC1291F770300C7A162 /* AppDelegate.swift */; };
 		20BD7BC4291F770300C7A162 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BD7BC3291F770300C7A162 /* SceneDelegate.swift */; };
 		20BD7BC6291F770300C7A162 /* CatFactListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BD7BC5291F770300C7A162 /* CatFactListViewController.swift */; };
@@ -28,7 +31,7 @@
 		20F4837D291FF3A2005FF1D8 /* CatFactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F4837C291FF3A2005FF1D8 /* CatFactCell.swift */; };
 		20F4837F291FF433005FF1D8 /* CatFactLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F4837E291FF433005FF1D8 /* CatFactLoader.swift */; };
 		20F483852920CF79005FF1D8 /* RemoteCatFactResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F483842920CF79005FF1D8 /* RemoteCatFactResponse.swift */; };
-		20F483872920CF8F005FF1D8 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F483862920CF8F005FF1D8 /* NetworkError.swift */; };
+		20F483872920CF8F005FF1D8 /* GeneralError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F483862920CF8F005FF1D8 /* GeneralError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +46,9 @@
 		201CE967298037AC00BF5CD6 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		201CE969298037C300BF5CD6 /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
 		201CE96E2980389B00BF5CD6 /* AlamofireHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireHTTPClient.swift; sourceTree = "<group>"; };
+		201CE97529803BF400BF5CD6 /* CatFactsUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFactsUIComposer.swift; sourceTree = "<group>"; };
+		201CE97729803D1600BF5CD6 /* MainQueueDispatchDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQueueDispatchDecorator.swift; sourceTree = "<group>"; };
+		201CE97929803D3900BF5CD6 /* CatFactsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFactsFactory.swift; sourceTree = "<group>"; };
 		20BD7BBE291F770300C7A162 /* SOLID iOS Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SOLID iOS Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		20BD7BC1291F770300C7A162 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20BD7BC3291F770300C7A162 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,7 +60,7 @@
 		20F4837C291FF3A2005FF1D8 /* CatFactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFactCell.swift; sourceTree = "<group>"; };
 		20F4837E291FF433005FF1D8 /* CatFactLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFactLoader.swift; sourceTree = "<group>"; };
 		20F483842920CF79005FF1D8 /* RemoteCatFactResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteCatFactResponse.swift; sourceTree = "<group>"; };
-		20F483862920CF8F005FF1D8 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		20F483862920CF8F005FF1D8 /* GeneralError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +75,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		201CE97029803B3800BF5CD6 /* CatFacts Feature */ = {
+			isa = PBXGroup;
+			children = (
+				201CE97429803B9B00BF5CD6 /* JSON */,
+				201CE97329803B9300BF5CD6 /* Fallback */,
+				201CE97229803B7F00BF5CD6 /* Decorator */,
+				201CE97129803B6000BF5CD6 /* API */,
+				20F4837E291FF433005FF1D8 /* CatFactLoader.swift */,
+				201CE9592980187200BF5CD6 /* CatFactItem.swift */,
+			);
+			path = "CatFacts Feature";
+			sourceTree = "<group>";
+		};
+		201CE97129803B6000BF5CD6 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				201CE9572980185E00BF5CD6 /* CatFactItemMapper.swift */,
+				201CE9612980280A00BF5CD6 /* RemoteCatFactLoader.swift */,
+				20F483842920CF79005FF1D8 /* RemoteCatFactResponse.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		201CE97229803B7F00BF5CD6 /* Decorator */ = {
+			isa = PBXGroup;
+			children = (
+				201CE95B2980222200BF5CD6 /* CatFactLoaderLoggerDecorator.swift */,
+				201CE95D2980223600BF5CD6 /* CatFactLoaderCacheDecorator.swift */,
+			);
+			path = Decorator;
+			sourceTree = "<group>";
+		};
+		201CE97329803B9300BF5CD6 /* Fallback */ = {
+			isa = PBXGroup;
+			children = (
+				201CE96529802B3E00BF5CD6 /* CatFactLoaderFallbackComposite.swift */,
+			);
+			path = Fallback;
+			sourceTree = "<group>";
+		};
+		201CE97429803B9B00BF5CD6 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				201CE9632980281E00BF5CD6 /* JSONCatFactLoader.swift */,
+				201CE95F2980232600BF5CD6 /* CatFacts.json */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
 		20BD7BB5291F770300C7A162 = {
 			isa = PBXGroup;
 			children = (
@@ -88,15 +143,18 @@
 		20BD7BC0291F770300C7A162 /* SOLID iOS Example */ = {
 			isa = PBXGroup;
 			children = (
-				201CE95F2980232600BF5CD6 /* CatFacts.json */,
+				20F483812920C3D3005FF1D8 /* HTTPClient Feature */,
+				201CE97029803B3800BF5CD6 /* CatFacts Feature */,
 				20F483822920C3FC005FF1D8 /* UI */,
-				20F483812920C3D3005FF1D8 /* Data Loader */,
 				20F483802920C3C6005FF1D8 /* Data Model */,
 				20BD7BC1291F770300C7A162 /* AppDelegate.swift */,
 				20BD7BC3291F770300C7A162 /* SceneDelegate.swift */,
 				20BD7BCA291F770500C7A162 /* Assets.xcassets */,
 				20BD7BCC291F770500C7A162 /* LaunchScreen.storyboard */,
 				20BD7BCF291F770500C7A162 /* Info.plist */,
+				201CE97529803BF400BF5CD6 /* CatFactsUIComposer.swift */,
+				201CE97729803D1600BF5CD6 /* MainQueueDispatchDecorator.swift */,
+				201CE97929803D3900BF5CD6 /* CatFactsFactory.swift */,
 			);
 			path = "SOLID iOS Example";
 			sourceTree = "<group>";
@@ -105,28 +163,19 @@
 			isa = PBXGroup;
 			children = (
 				20F4837C291FF3A2005FF1D8 /* CatFactCell.swift */,
-				20F483842920CF79005FF1D8 /* RemoteCatFactResponse.swift */,
-				20F483862920CF8F005FF1D8 /* NetworkError.swift */,
+				20F483862920CF8F005FF1D8 /* GeneralError.swift */,
 			);
 			path = "Data Model";
 			sourceTree = "<group>";
 		};
-		20F483812920C3D3005FF1D8 /* Data Loader */ = {
+		20F483812920C3D3005FF1D8 /* HTTPClient Feature */ = {
 			isa = PBXGroup;
 			children = (
-				20F4837E291FF433005FF1D8 /* CatFactLoader.swift */,
-				201CE9572980185E00BF5CD6 /* CatFactItemMapper.swift */,
-				201CE9592980187200BF5CD6 /* CatFactItem.swift */,
-				201CE95B2980222200BF5CD6 /* CatFactLoaderLoggerDecorator.swift */,
-				201CE95D2980223600BF5CD6 /* CatFactLoaderCacheDecorator.swift */,
-				201CE9612980280A00BF5CD6 /* RemoteCatFactLoader.swift */,
-				201CE9632980281E00BF5CD6 /* JSONCatFactLoader.swift */,
-				201CE96529802B3E00BF5CD6 /* CatFactLoaderFallbackComposite.swift */,
 				201CE967298037AC00BF5CD6 /* HTTPClient.swift */,
 				201CE969298037C300BF5CD6 /* URLSessionHTTPClient.swift */,
 				201CE96E2980389B00BF5CD6 /* AlamofireHTTPClient.swift */,
 			);
-			path = "Data Loader";
+			path = "HTTPClient Feature";
 			sourceTree = "<group>";
 		};
 		20F483822920C3FC005FF1D8 /* UI */ = {
@@ -220,15 +269,18 @@
 				201CE9622980280A00BF5CD6 /* RemoteCatFactLoader.swift in Sources */,
 				201CE95C2980222200BF5CD6 /* CatFactLoaderLoggerDecorator.swift in Sources */,
 				201CE95E2980223600BF5CD6 /* CatFactLoaderCacheDecorator.swift in Sources */,
-				20F483872920CF8F005FF1D8 /* NetworkError.swift in Sources */,
+				20F483872920CF8F005FF1D8 /* GeneralError.swift in Sources */,
 				201CE95A2980187200BF5CD6 /* CatFactItem.swift in Sources */,
 				201CE9642980281E00BF5CD6 /* JSONCatFactLoader.swift in Sources */,
 				201CE96629802B3E00BF5CD6 /* CatFactLoaderFallbackComposite.swift in Sources */,
 				20F4837F291FF433005FF1D8 /* CatFactLoader.swift in Sources */,
+				201CE97A29803D3900BF5CD6 /* CatFactsFactory.swift in Sources */,
 				20BD7BC6291F770300C7A162 /* CatFactListViewController.swift in Sources */,
+				201CE97629803BF400BF5CD6 /* CatFactsUIComposer.swift in Sources */,
 				201CE9582980185E00BF5CD6 /* CatFactItemMapper.swift in Sources */,
 				201CE96A298037C300BF5CD6 /* URLSessionHTTPClient.swift in Sources */,
 				201CE968298037AC00BF5CD6 /* HTTPClient.swift in Sources */,
+				201CE97829803D1600BF5CD6 /* MainQueueDispatchDecorator.swift in Sources */,
 				20BD7BC2291F770300C7A162 /* AppDelegate.swift in Sources */,
 				201CE96F2980389B00BF5CD6 /* AlamofireHTTPClient.swift in Sources */,
 				20F4837D291FF3A2005FF1D8 /* CatFactCell.swift in Sources */,

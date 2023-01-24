@@ -16,7 +16,7 @@ class AlamofireHTTPClient: HTTPClient {
             } else if let data = response.data, let response = response.response {
                 completion(.success((data, response)))
             } else {
-                completion(.failure(NetworkError.unexpectedData))
+                completion(.failure(GeneralError.unexpectedData))
             }
         }
     }
