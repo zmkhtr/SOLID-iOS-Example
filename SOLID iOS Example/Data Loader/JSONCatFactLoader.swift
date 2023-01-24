@@ -8,7 +8,7 @@
 import Foundation
 
 class JSONCatFactLoader: CatFactLoader {
-    override func load(completion: @escaping (CatFactLoader.Result) -> Void) {
+    func load(completion: @escaping (CatFactLoader.Result) -> Void) {
         if let url = Bundle.main.url(forResource: "CatFacts", withExtension: "json") {
             do {
                 let data = try Data(contentsOf: url)

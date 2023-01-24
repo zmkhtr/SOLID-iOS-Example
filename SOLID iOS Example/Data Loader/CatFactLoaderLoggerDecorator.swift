@@ -8,9 +8,14 @@
 import Foundation
 
 class CatFactLoaderLoggerDecorator: CatFactLoader {
+    private let decoratee: CatFactLoader
     
-    override func load(completion: @escaping (CatFactLoader.Result) -> Void) {
-        super.load { result in
+    init(decoratee: CatFactLoader) {
+        self.decoratee = decoratee
+    }
+    
+    func load(completion: @escaping (CatFactLoader.Result) -> Void) {
+        decoratee.load { result in
             print("RESULT : \(result)")
         }
     }
