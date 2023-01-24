@@ -12,4 +12,3 @@ protocol CatFactLoader {
     
     func load(completion: @escaping (Result) -> Void)
 }
-}

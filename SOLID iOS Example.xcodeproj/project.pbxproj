@@ -15,6 +15,10 @@
 		201CE9622980280A00BF5CD6 /* RemoteCatFactLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201CE9612980280A00BF5CD6 /* RemoteCatFactLoader.swift */; };
 		201CE9642980281E00BF5CD6 /* JSONCatFactLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201CE9632980281E00BF5CD6 /* JSONCatFactLoader.swift */; };
 		201CE96629802B3E00BF5CD6 /* CatFactLoaderFallbackComposite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201CE96529802B3E00BF5CD6 /* CatFactLoaderFallbackComposite.swift */; };
+		201CE968298037AC00BF5CD6 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201CE967298037AC00BF5CD6 /* HTTPClient.swift */; };
+		201CE96A298037C300BF5CD6 /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201CE969298037C300BF5CD6 /* URLSessionHTTPClient.swift */; };
+		201CE96D2980382700BF5CD6 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 201CE96C2980382700BF5CD6 /* Alamofire */; };
+		201CE96F2980389B00BF5CD6 /* AlamofireHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201CE96E2980389B00BF5CD6 /* AlamofireHTTPClient.swift */; };
 		20BD7BC2291F770300C7A162 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BD7BC1291F770300C7A162 /* AppDelegate.swift */; };
 		20BD7BC4291F770300C7A162 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BD7BC3291F770300C7A162 /* SceneDelegate.swift */; };
 		20BD7BC6291F770300C7A162 /* CatFactListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BD7BC5291F770300C7A162 /* CatFactListViewController.swift */; };
@@ -36,6 +40,9 @@
 		201CE9612980280A00BF5CD6 /* RemoteCatFactLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteCatFactLoader.swift; sourceTree = "<group>"; };
 		201CE9632980281E00BF5CD6 /* JSONCatFactLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONCatFactLoader.swift; sourceTree = "<group>"; };
 		201CE96529802B3E00BF5CD6 /* CatFactLoaderFallbackComposite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFactLoaderFallbackComposite.swift; sourceTree = "<group>"; };
+		201CE967298037AC00BF5CD6 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		201CE969298037C300BF5CD6 /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
+		201CE96E2980389B00BF5CD6 /* AlamofireHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireHTTPClient.swift; sourceTree = "<group>"; };
 		20BD7BBE291F770300C7A162 /* SOLID iOS Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SOLID iOS Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		20BD7BC1291F770300C7A162 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20BD7BC3291F770300C7A162 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				201CE96D2980382700BF5CD6 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +122,9 @@
 				201CE9612980280A00BF5CD6 /* RemoteCatFactLoader.swift */,
 				201CE9632980281E00BF5CD6 /* JSONCatFactLoader.swift */,
 				201CE96529802B3E00BF5CD6 /* CatFactLoaderFallbackComposite.swift */,
+				201CE967298037AC00BF5CD6 /* HTTPClient.swift */,
+				201CE969298037C300BF5CD6 /* URLSessionHTTPClient.swift */,
+				201CE96E2980389B00BF5CD6 /* AlamofireHTTPClient.swift */,
 			);
 			path = "Data Loader";
 			sourceTree = "<group>";
@@ -143,6 +154,9 @@
 			dependencies = (
 			);
 			name = "SOLID iOS Example";
+			packageProductDependencies = (
+				201CE96C2980382700BF5CD6 /* Alamofire */,
+			);
 			productName = "SOLID iOS Example";
 			productReference = 20BD7BBE291F770300C7A162 /* SOLID iOS Example.app */;
 			productType = "com.apple.product-type.application";
@@ -171,6 +185,9 @@
 				Base,
 			);
 			mainGroup = 20BD7BB5291F770300C7A162;
+			packageReferences = (
+				201CE96B2980382700BF5CD6 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 20BD7BBF291F770300C7A162 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -210,7 +227,10 @@
 				20F4837F291FF433005FF1D8 /* CatFactLoader.swift in Sources */,
 				20BD7BC6291F770300C7A162 /* CatFactListViewController.swift in Sources */,
 				201CE9582980185E00BF5CD6 /* CatFactItemMapper.swift in Sources */,
+				201CE96A298037C300BF5CD6 /* URLSessionHTTPClient.swift in Sources */,
+				201CE968298037AC00BF5CD6 /* HTTPClient.swift in Sources */,
 				20BD7BC2291F770300C7A162 /* AppDelegate.swift in Sources */,
+				201CE96F2980389B00BF5CD6 /* AlamofireHTTPClient.swift in Sources */,
 				20F4837D291FF3A2005FF1D8 /* CatFactCell.swift in Sources */,
 				20BD7BC4291F770300C7A162 /* SceneDelegate.swift in Sources */,
 			);
@@ -432,6 +452,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		201CE96B2980382700BF5CD6 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		201CE96C2980382700BF5CD6 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 201CE96B2980382700BF5CD6 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 20BD7BB6291F770300C7A162 /* Project object */;
 }

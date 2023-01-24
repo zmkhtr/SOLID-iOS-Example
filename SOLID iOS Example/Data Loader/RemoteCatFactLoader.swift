@@ -10,26 +10,26 @@ import Foundation
 class RemoteCatFactLoader: CatFactLoader {
     
     private let url: URL
-    private let session: URLSession
+    private let client: HTTPClient
     
-    init(url: URL, session: URLSession) {
+    init(url: URL, client: HTTPClient) {
         self.url = url
-        self.session = session
+        self.client = client
     }
     
     typealias Result = CatFactLoader.Result
     
     
     func load(completion: @escaping (Result) -> Void) {
-        session.dataTask(with: url) { [weak self] (data, response, error) in
+        client.request(from: url) { [weak self] result in
             guard self != nil else { return }
-            if let data = data,
-               let response = response as? HTTPURLResponse {
+            switch result {
+            case let .success((data, response)):
                 completion(RemoteCatFactLoader.map(data, response))
-            } else {
+            case .failure:
                 completion(.failure(NetworkError.networkError))
             }
-        }.resume()
+        }
     }
     
     private static func map(_ data: Data, _ response: HTTPURLResponse) -> Result {
