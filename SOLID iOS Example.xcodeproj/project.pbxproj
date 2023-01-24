@@ -11,7 +11,7 @@
 		201CE95A2980187200BF5CD6 /* CatFactItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201CE9592980187200BF5CD6 /* CatFactItem.swift */; };
 		20BD7BC2291F770300C7A162 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BD7BC1291F770300C7A162 /* AppDelegate.swift */; };
 		20BD7BC4291F770300C7A162 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BD7BC3291F770300C7A162 /* SceneDelegate.swift */; };
-		20BD7BC6291F770300C7A162 /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BD7BC5291F770300C7A162 /* MovieListViewController.swift */; };
+		20BD7BC6291F770300C7A162 /* CatFactListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BD7BC5291F770300C7A162 /* CatFactListViewController.swift */; };
 		20BD7BC9291F770300C7A162 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20BD7BC7291F770300C7A162 /* Main.storyboard */; };
 		20BD7BCB291F770500C7A162 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20BD7BCA291F770500C7A162 /* Assets.xcassets */; };
 		20BD7BCE291F770500C7A162 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20BD7BCC291F770500C7A162 /* LaunchScreen.storyboard */; };
@@ -27,7 +27,7 @@
 		20BD7BBE291F770300C7A162 /* SOLID iOS Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SOLID iOS Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		20BD7BC1291F770300C7A162 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20BD7BC3291F770300C7A162 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		20BD7BC5291F770300C7A162 /* MovieListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewController.swift; sourceTree = "<group>"; };
+		20BD7BC5291F770300C7A162 /* CatFactListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFactListViewController.swift; sourceTree = "<group>"; };
 		20BD7BC8291F770300C7A162 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		20BD7BCA291F770500C7A162 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		20BD7BCD291F770500C7A162 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -103,7 +103,7 @@
 		20F483822920C3FC005FF1D8 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				20BD7BC5291F770300C7A162 /* MovieListViewController.swift */,
+				20BD7BC5291F770300C7A162 /* CatFactListViewController.swift */,
 				20BD7BC7291F770300C7A162 /* Main.storyboard */,
 			);
 			path = UI;
@@ -184,7 +184,7 @@
 				20F483872920CF8F005FF1D8 /* NetworkError.swift in Sources */,
 				201CE95A2980187200BF5CD6 /* CatFactItem.swift in Sources */,
 				20F4837F291FF433005FF1D8 /* CatFactLoader.swift in Sources */,
-				20BD7BC6291F770300C7A162 /* MovieListViewController.swift in Sources */,
+				20BD7BC6291F770300C7A162 /* CatFactListViewController.swift in Sources */,
 				201CE9582980185E00BF5CD6 /* CatFactItemMapper.swift in Sources */,
 				20BD7BC2291F770300C7A162 /* AppDelegate.swift in Sources */,
 				20F4837D291FF3A2005FF1D8 /* CatFactCell.swift in Sources */,
