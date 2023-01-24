@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct RemoteCatFactResponse: Codable {
+struct RemoteCatFactResponse: Decodable {
     let current_page: Int
     let data: [RemoteCatFact]
     let first_page_url: URL
@@ -20,12 +20,12 @@ struct RemoteCatFactResponse: Codable {
     let to, total: Int
 }
 
-struct RemoteCatFact: Codable {
+struct RemoteCatFact: Decodable {
     let fact: String
     let length: Int
 }
 
-struct RemoteLink: Codable {
+struct RemoteLink: Decodable {
     let url: String?
     let label: String
     let active: Bool

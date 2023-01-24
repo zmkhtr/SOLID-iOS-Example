@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		201CE9582980185E00BF5CD6 /* CatFactItemMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201CE9572980185E00BF5CD6 /* CatFactItemMapper.swift */; };
+		201CE95A2980187200BF5CD6 /* CatFactItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201CE9592980187200BF5CD6 /* CatFactItem.swift */; };
 		20BD7BC2291F770300C7A162 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BD7BC1291F770300C7A162 /* AppDelegate.swift */; };
 		20BD7BC4291F770300C7A162 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BD7BC3291F770300C7A162 /* SceneDelegate.swift */; };
 		20BD7BC6291F770300C7A162 /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BD7BC5291F770300C7A162 /* MovieListViewController.swift */; };
@@ -14,12 +16,14 @@
 		20BD7BCB291F770500C7A162 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20BD7BCA291F770500C7A162 /* Assets.xcassets */; };
 		20BD7BCE291F770500C7A162 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20BD7BCC291F770500C7A162 /* LaunchScreen.storyboard */; };
 		20F4837D291FF3A2005FF1D8 /* CatFactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F4837C291FF3A2005FF1D8 /* CatFactCell.swift */; };
-		20F4837F291FF433005FF1D8 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F4837E291FF433005FF1D8 /* APIService.swift */; };
+		20F4837F291FF433005FF1D8 /* CatFactLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F4837E291FF433005FF1D8 /* CatFactLoader.swift */; };
 		20F483852920CF79005FF1D8 /* RemoteCatFactResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F483842920CF79005FF1D8 /* RemoteCatFactResponse.swift */; };
 		20F483872920CF8F005FF1D8 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F483862920CF8F005FF1D8 /* NetworkError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		201CE9572980185E00BF5CD6 /* CatFactItemMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFactItemMapper.swift; sourceTree = "<group>"; };
+		201CE9592980187200BF5CD6 /* CatFactItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFactItem.swift; sourceTree = "<group>"; };
 		20BD7BBE291F770300C7A162 /* SOLID iOS Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SOLID iOS Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		20BD7BC1291F770300C7A162 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20BD7BC3291F770300C7A162 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -29,7 +33,7 @@
 		20BD7BCD291F770500C7A162 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		20BD7BCF291F770500C7A162 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20F4837C291FF3A2005FF1D8 /* CatFactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFactCell.swift; sourceTree = "<group>"; };
-		20F4837E291FF433005FF1D8 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		20F4837E291FF433005FF1D8 /* CatFactLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFactLoader.swift; sourceTree = "<group>"; };
 		20F483842920CF79005FF1D8 /* RemoteCatFactResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteCatFactResponse.swift; sourceTree = "<group>"; };
 		20F483862920CF8F005FF1D8 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,7 +93,9 @@
 		20F483812920C3D3005FF1D8 /* Data Loader */ = {
 			isa = PBXGroup;
 			children = (
-				20F4837E291FF433005FF1D8 /* APIService.swift */,
+				20F4837E291FF433005FF1D8 /* CatFactLoader.swift */,
+				201CE9572980185E00BF5CD6 /* CatFactItemMapper.swift */,
+				201CE9592980187200BF5CD6 /* CatFactItem.swift */,
 			);
 			path = "Data Loader";
 			sourceTree = "<group>";
@@ -176,8 +182,10 @@
 			files = (
 				20F483852920CF79005FF1D8 /* RemoteCatFactResponse.swift in Sources */,
 				20F483872920CF8F005FF1D8 /* NetworkError.swift in Sources */,
-				20F4837F291FF433005FF1D8 /* APIService.swift in Sources */,
+				201CE95A2980187200BF5CD6 /* CatFactItem.swift in Sources */,
+				20F4837F291FF433005FF1D8 /* CatFactLoader.swift in Sources */,
 				20BD7BC6291F770300C7A162 /* MovieListViewController.swift in Sources */,
+				201CE9582980185E00BF5CD6 /* CatFactItemMapper.swift in Sources */,
 				20BD7BC2291F770300C7A162 /* AppDelegate.swift in Sources */,
 				20F4837D291FF3A2005FF1D8 /* CatFactCell.swift in Sources */,
 				20BD7BC4291F770300C7A162 /* SceneDelegate.swift in Sources */,
