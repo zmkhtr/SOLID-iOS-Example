@@ -21,12 +21,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let url = URL(string: "https://catfact.ninja/facts")!
         let session = URLSession(configuration: .ephemeral)
-        let loader = JSONCatFactLoader(url: url, session: session)
+        let remote = RemoteCatFactLoader(url: url, session: session)
+        let json = JSONCatFactLoader()
+        
+        let loader = CatFactLoaderFallbackComposite(
+            primary: remote,
+            fallback: json)
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let viewController = storyboard.instantiateInitialViewController { coder in
             return CatFactListViewController(coder: coder, loader: loader)
         }
+        
         
         window?.rootViewController = viewController
         window?.makeKeyAndVisible()
